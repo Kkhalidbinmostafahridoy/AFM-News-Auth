@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar, FaEye, FaShareAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const NewsCards = ({ items }) => {
   const {
@@ -37,7 +38,7 @@ const NewsCards = ({ items }) => {
       />
       <p className="text-sm text-gray-700">
         {details.slice(0, 150)}...
-        <span className="text-orange-500 font-medium cursor-pointer"> Read More</span>
+        <Link to={`/news/${items._id}`} className="text-orange-500 font-medium cursor-pointer"> Read More</Link>
       </p>
       <div className="flex justify-between items-center text-sm text-gray-600">
         <div className="flex items-center gap-1 text-orange-400">
